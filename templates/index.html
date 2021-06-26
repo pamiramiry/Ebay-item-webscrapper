@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='design.css') }}"
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Welcome back Pamir,</h1>
+    <h2> Your list of shoes that you can sell for profit are:</h2>
+    
+    <div id="table">
+        <li class="heading">Name</li>
+        <li class="heading">Price</li>
+        <li class="heading">Link</li>
+        {% for x in display_shoes %}
+           
+                <li>{{ x.name }}</li>
+                <li>{{ x.profit }}</li>
+                <a href="url">{{ x.page }}</a>
+                
+            
+    {% endfor %}
+    </div>
+    <div id="end">The end</div>
+    
+</body>
+</html>
